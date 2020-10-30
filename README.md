@@ -8,10 +8,10 @@ Candle Down - The close of the current candle is less than the close of the prev
 
 A Candle has only four fundamental states from a previous candle:
 
-NOT Up OR NOT Down,
-Up,
-Down,
-Up AND Candle Down
+NOT Up OR NOT Down.
+Up.
+Down.
+Up AND Candle Down.
 
 This can be optimized to simply displaying an UP or DOWN state on a display with the other two states being implied.
 
