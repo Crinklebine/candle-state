@@ -1,0 +1,18 @@
+// This source code is subject to the terms of the Mozilla Public License 2.0 at https://mozilla.org/MPL/2.0/
+// © Crinklebine
+
+//@version=4
+// Candle State Pine Script
+// (c)2020 Crinklebine Crinklebine.com
+study("Candle State (The Strat)", overlay=true, precision=0)
+
+// write text credit
+plotshape(true, title="Crinklebine Version 2", style=shape.cross, color=#0080FF, location=location.bottom, text="Crinklebine.com", textcolor=#0080FF, show_last=1)
+
+// check for candle state up (high greater previous candle high) and plot an identifier
+barResult1 = high > high[1]
+plotshape(barResult1, title="Bar State Up Label", style=shape.triangleup, location=location.abovebar, color=color.green)
+
+// check for candle state down (low less than previous candle low) and plot an identifier
+barResult2 = low < low[1]
+plotshape(barResult2, title="Bar State Down Label", style=shape.triangledown, location=location.abovebar, color=color.red)
